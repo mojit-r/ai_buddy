@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "443295994537",
+    "project_id": "ai-buddy-2025",
+    "storage_bucket": "ai-buddy-2025.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443295994537:android:1db2dd57d9ac39858d8fb8",
+        "android_client_info": {
+          "package_name": "com.mojit.aibuddy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrVq8y5Dc9N3HxaEeiDT9zff67kMvTFpg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
