@@ -97,23 +97,29 @@ class _ImageFeatureState extends State<ImageFeature> {
                   padding: EdgeInsets.only(bottom: mq.height * .03),
                   physics: const BouncingScrollPhysics(),
                   child: Wrap(
-                    spacing: 10,
+                    // spacing: 10,
                     children: _c.imageList
-                        .map((e) => InkWell(
-                              onTap: () {
-                                _c.url.value = e;
-                              },
-                              child: ClipRRect(
-                                borderRadius:
-                                    const BorderRadius.all(Radius.circular(8)),
-                                child: CachedNetworkImage(
-                                  imageUrl: e,
-                                  height: 100,
-                                  errorWidget: (context, url, error) =>
-                                      const SizedBox(),
+                        .mapIndexed((i, e) => i > 10
+                            ? SizedBox()
+                            : InkWell(
+                                onTap: () {
+                                  _c.url.value = e;
+                                },
+                                child: Padding(
+                                  padding: EdgeInsets.only(right: 10),
+                                  child: ClipRRect(
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(8)),
+                                    child: CachedNetworkImage(
+                                      imageUrl: e,
+                                      height: 100,
+                                      memCacheHeight: 100,
+                                      errorWidget: (context, url, error) =>
+                                          const SizedBox(),
+                                    ),
+                                  ),
                                 ),
-                              ),
-                            ))
+                              ))
                         .toList(),
                   ),
                 )),

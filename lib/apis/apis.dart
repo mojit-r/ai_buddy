@@ -88,6 +88,8 @@ class APIs {
         list.add('https://image.lexica.art/full_jpg/${i['id']}');
       }
 
+      list.shuffle();
+
       return list;
 
       // list.shuffle();
